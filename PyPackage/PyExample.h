@@ -23,6 +23,7 @@ typedef _object PyObject;
 #endif
 
 #include <vector>
+#include <string>
 
 namespace example {
   /**
