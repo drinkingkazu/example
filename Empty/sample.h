@@ -14,23 +14,25 @@
 #ifndef EXAMPLE_EMPTY_SAMPLE_H
 #define EXAMPLE_EMPTY_SAMPLE_H
 
-/**
-   \class sample
-   User defined class EmptyExample ... these comments are used to generate
-   doxygen documentation!
- */
-class sample{
+namespace example {
+  /**
+     \class sample
+     This is a sample class with a greeting function
+  */
+  class sample{
+    
+  public:
+    
+    /// Default constructor
+    sample(){}
+    
+    /// Default destructor
+    virtual ~sample(){}
 
-public:
-
-  /// Default constructor
-  sample(){}
-
-  /// Default destructor
-  virtual ~sample(){}
-
-};
-
+    /// Greet!
+    void Greet() const;
+  };
+}
 #endif
 /** @} */ // end of doxygen group 
 

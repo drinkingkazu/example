@@ -607,7 +607,9 @@ EXCLUDE_SYMLINKS       = NO
 # for example use the pattern */test/*
 
 EXCLUDE_PATTERNS       = *Cint.cxx \
+		         *Dict.cxx \
                          *Cint.h \
+			 *Dict.h \
 			 *LinkDef.h \
 			 *.py \
 			 *.root \
