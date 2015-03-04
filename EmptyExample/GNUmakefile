@@ -3,7 +3,7 @@
 #
 
 # specific names for this package
-DICT  = EmptyExampleCint
+DICT  = LArLiteExample_EmptyExampleDict
 SHLIB = libLArLiteExample_EmptyExample.so
 SOURCES = $(filter-out $(DICT).cxx, $(wildcard *.cxx))
 FMWK_HEADERS = LinkDef.h $(DICT).h
@@ -19,9 +19,6 @@ HOST            = $(shell uname -n)
 OSNAMEMODE      = $(OSNAME)
 
 include $(LARLITE_BASEDIR)/Makefile/Makefile.${OSNAME}
-
-# set compiler options for ROOT
-CXXFLAGS +=  `root-config --cflags`
 
 # call the common GNUmakefile
 include $(LARLITE_BASEDIR)/Makefile/GNUmakefile.CORE
