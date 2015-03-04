@@ -1,5 +1,5 @@
 import sys
-from ROOT import gSystem, TCanvas, TH2D
+from ROOT import gSystem, TCanvas, TH2D, TFile
 gSystem.Load("libExample_DataProduct")
 from ROOT import example
 
@@ -9,14 +9,36 @@ myscotch = example.Scotch()
 myscotch.Speak()
 
 print
+print "Saving a single scotch..."
+fout = TFile.Open("SingleScotch.root","RECREATE")
+myscotch.Write("single")
+fout.Close()
+
+print
+print "Reading the saved scotch..."
+fin = TFile.Open("SingleScotch.root","READ")
+myscotch = fin.Get("single")
+myscotch.Speak()
+
+print
 print "Let's make many scotches in TTree..."
 myscotch.ShipScotch("trial.root")
 
 print
-print "Let's now open a file, draw price vs. age distribution!"
+print "Let's now open a file, read-in the stored TTree..."
 from ROOT import TChain
 ch=TChain("tree")
 ch.AddFile("trial.root")
+print "Found",ch.GetEntries(),"entries!"
+
+print
+print "Make an easy access to the first Scotch..."
+ch.GetEntry(0)
+ch.scotch.Speak()
+
+print
+print "Draw stored Scotches' price vs. age..."
+
 c=TCanvas("c","",600,500)
 c.SetLogz(1)
 c.SetLeftMargin(0.13)
