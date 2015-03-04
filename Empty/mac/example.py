@@ -1,5 +1,6 @@
-import sys
-from ROOT import *
+import sys, ROOT
+ROOT.gSystem.Load("libExample_Empty")
+from ROOT import sample
 
 try:
 

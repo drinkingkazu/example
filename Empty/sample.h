@@ -1,20 +1,18 @@
 /**
  * \file sample.h
  *
- * \ingroup EmptyExample
+ * \ingroup Empty
  * 
  * \brief Class def header for a class sample
  *
  * @author kazuhiro
  */
 
-/** \addtogroup EmptyExample
+/** \addtogroup Empty
 
     @{*/
-#ifndef LARLITE_EMPTYEXAMPLE_SAMPLE_H
-#define LARLITE_EMPTYEXAMPLE_SAMPLE_H
-
-#include <iostream>
+#ifndef EXAMPLE_EMPTY_SAMPLE_H
+#define EXAMPLE_EMPTY_SAMPLE_H
 
 /**
    \class sample
@@ -29,7 +27,7 @@ public:
   sample(){}
 
   /// Default destructor
-  virtual ~sample(){};
+  virtual ~sample(){}
 
 };
 

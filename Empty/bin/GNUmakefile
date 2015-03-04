@@ -1,9 +1,9 @@
 # Include your header file location
-CXXFLAGS += -I$(LARLITE_USERDEVDIR)/LArLiteExample
+CXXFLAGS += -I$(LARLITE_USERDEVDIR)/Example
 CXXFLAGS += -I. $(shell root-config --cflags) -g
 
 # Include your shared object lib location
-LDFLAGS += -L$(LARLITE_LIBDIR) -lLArLiteExample_EmptyExample 
+LDFLAGS += -L$(LARLITE_LIBDIR) -lExample_Empty
 LDFLAGS += $(shell root-config --libs) -lPhysics -lMatrix -g
 
 # platform-specific options

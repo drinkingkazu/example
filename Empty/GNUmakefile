@@ -3,8 +3,8 @@
 #
 
 # specific names for this package
-DICT  = LArLiteExample_EmptyExampleDict
-SHLIB = libLArLiteExample_EmptyExample.so
+DICT  = Example_EmptyDict
+SHLIB = libExample_Empty.so
 SOURCES = $(filter-out $(DICT).cxx, $(wildcard *.cxx))
 FMWK_HEADERS = LinkDef.h $(DICT).h
 HEADERS = $(filter-out $(FMWK_HEADERS), $(wildcard *.h))
